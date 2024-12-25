@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilih Warna</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="font">Pilih Warna</div>
+      <div class="box">
+        <div class="circle blue"></div>
+        <div class="circle orange"></div>
+        <div class="circle violet"></div>
+        <div class="circle black"></div>
+      </div>
+
+      <div class="reset">
+        <div class="title"><input type="button" value="Reset" /></div>
+      </div>
+    </div>
+
+    <script>
+      const circles = document.querySelectorAll(".circle");
+      circles.forEach((circle) => {
+        circle.addEventListener("click", ({ target }) => {
+          const { backgroundColor } = getComputedStyle(target);
+          document.body.style.backgroundColor = backgroundColor;
+        });
+      });
+
+      const resets = document.querySelectorAll(".title");
+      resets.forEach((title) => {
+        title.addEventListener("click", ({ target }) => {
+          const { backgroundColor } = getComputedStyle(target);
+          document.body.style.backgroundColor = backgroundColor;
+        });
+      });
+      const fonts = document.querySelector((id = "font"));
+      textElement = document.getElementById((id = "font"));
+      fonts.forEach((title) => {
+        font.addEventListener("click", ({ target }) => {
+          const { backgroundColor } = getComputedStyle(target);
+          document.body.style.backgroundColor;
+        });
+        if (event.target.classList.contains("black")) {
+          textElement.style.color = "white";
+        } else {
+          textElement.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>
